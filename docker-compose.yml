@@ -8,9 +8,9 @@ services:
     volumes:
       - ./:/usr/share/nginx/html:ro
     environment:
-      - VIRTUAL_HOST=multiservice.apps.com.pe,www.multiservice.apps.com.pe
-      - LETSENCRYPT_HOST=multiservice.apps.com.pe,www.multiservice.apps.com.pe
-      - LETSENCRYPT_EMAIL=kevin.silva.095@gmail.com
+      - VIRTUAL_HOST=tuenvioweb.apps.com.pe,www.tuenvioweb.apps.com.pe
+      - LETSENCRYPT_HOST=tuenvioweb.apps.com.pe,www.tuenvioweb.apps.com.pe
+      - LETSENCRYPT_EMAIL=miguekos1233@gmail.com
 networks:
   default:
     external:
