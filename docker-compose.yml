@@ -11,6 +11,12 @@ services:
       - VIRTUAL_HOST=tuenvioweb.apps.com.pe,www.tuenvioweb.apps.com.pe
       - LETSENCRYPT_HOST=tuenvioweb.apps.com.pe,www.tuenvioweb.apps.com.pe
       - LETSENCRYPT_EMAIL=miguekos1233@gmail.com
+
+  php:
+    image: php:7-fpm
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+
 networks:
   default:
     external:
