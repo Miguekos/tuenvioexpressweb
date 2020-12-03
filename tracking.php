@@ -210,7 +210,7 @@ Coded by www.creative-tim.com
   <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
-  <script src="../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <!-- <script src="../assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script> -->
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     // A $( document ).ready() block.
