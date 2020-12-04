@@ -130,6 +130,9 @@ Coded by www.creative-tim.com
                 <div id="resultado">
 
                 </div>
+                <div id="fecha" style="font-size: 12px;">
+
+                </div>
               </div>
             </div>
             <div class="card-body">
@@ -277,7 +280,13 @@ Coded by www.creative-tim.com
         document.getElementById("tipodeservicio").innerHTML = (data.tipodepago)
         document.getElementById("valordeflete").innerHTML = `${data.valordeflete} $`
         document.getElementById("control").innerHTML = (data.control)
-
+        // console.log(typeof data.last_modified);
+        var current_datetime = new Date(data.last_modified);
+        // console.log(current_datetime.toLocaleString());
+        // let formatted_date = current_datetime.getDate() + "-" + (current_datetime.getMonth() + 1) + "-" + current_datetime.getFullYear()
+        // console.log(formatted_date)
+        current_datetime.setHours(current_datetime.getHours() - 5);
+        document.getElementById("fecha").innerHTML = (current_datetime.toLocaleString())
         if (data.estado == "0") {
           document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-danger">En Bodega</span>'
         } else if (data.estado == "1") {
