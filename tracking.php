@@ -40,8 +40,8 @@ Coded by www.creative-tim.com
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-      <a class="navbar-brand mr-lg-5" href="../index.html">
-        <img src="../assets/img/brand/white.png">
+      <a class="navbar-brand mr-lg-5" href="https://texcargoweb.apps.com.pe">
+        <img src="../assets/img/brand/black2.png">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,9 @@ Coded by www.creative-tim.com
         <div class="navbar-collapse-header">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="../../../index.html">
-                <img src="../assets/img/brand/blue.png">
+              <a href="https://texcargoweb.apps.com.pe">
+                <!-- <img src="../assets/img/wordwide.png"> -->
+                <img src="../assets/img/brand/black.png">
               </a>
             </div>
             <div class="col-6 collapse-close">
@@ -131,7 +132,7 @@ Coded by www.creative-tim.com
                 </div>
               </div>
             </div>
-            <div class="card-body px-lg-5 py-lg-5">
+            <div class="card-body">
               <div class="text-center text-muted mb-4">
                 <small></small>
                 <span id=""> Estado del paquete</span>
@@ -147,7 +148,7 @@ Coded by www.creative-tim.com
                   <div class="col-3" style="text-align: left;">
                     Recibe
                   </div>
-                  <div class="col-9" style="text-align: right;">
+                  <div class="col-9" style="text-align: right; font-size: 15px;">
                     <span id="nya"></span>
                   </div>
                 </div>
