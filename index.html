@@ -42,7 +42,7 @@ Coded by www.KosApps-tim.com
     <!-- Navbar -->
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
       <div class="container">
-        <a class="navbar-brand mr-lg-5" href="../index.html">
+        <a class="navbar-brand mr-lg-5" href="https://texcargoweb.apps.com.pe">
           <img src="./assets/img/wordwide.png">
           <img src="./assets/img/brand/white.png">
         </a>
@@ -54,7 +54,7 @@ Coded by www.KosApps-tim.com
           <div class="navbar-collapse-header">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <a href="../../../index.html">
+                <a href="https://texcargoweb.apps.com.pe">
                   <img src="./assets/img/wordwide.png">
                 </a>
               </div>
@@ -187,8 +187,8 @@ Coded by www.KosApps-tim.com
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group has-success">
-                          <input type="text" placeholder="Encontrar tu paquete: ID Registro"
-                            class="form-control is-valid" />
+                          <input type="text" id="buscar" value="" v-model="idbuscar" name="buscar"
+                            placeholder="Encontrar tu paquete: ID Registro" class="form-control is-valid" />
                         </div>
                       </div>
                       <div class="col-md-12">
@@ -269,7 +269,7 @@ Coded by www.KosApps-tim.com
           <div class="row">
             <div class="col-md-8 mx-auto text-center">
               <span class="badge badge-primary badge-pill mb-3">Porque Elegirnos</span>
-              <h3 class="display-3">Full-Funnel Social Analytics</h3>
+              <h3 class="display-3">Atencion las 24Horas</h3>
               <p class="lead">Es tiempo es importante para nosotros.
               </p>
             </div>
@@ -391,11 +391,14 @@ Coded by www.KosApps-tim.com
       el: '#app',
       data: {
         message: 'Hello Vue!',
-        titulo: "Seguimiento"
+        titulo: "Seguimiento",
+        idbuscar: ""
+
       },
       methods: {
         buscar() {
           console.log("buscar");
+          window.location.href = `https://texcargoweb.apps.com.pe/tracking.php?id=${this.idbuscar}`;
         }
       }
     })
@@ -414,8 +417,8 @@ Coded by www.KosApps-tim.com
   <script src="./assets/js/plugins/bootstrap-datepicker.min.js"></script>
   <!-- Control Center for Argon UI Kit: parallax effects, scripts for the example pages etc -->
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <script src="./assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+  <!-- <script src="./assets/js/argon-design-system.min.js?v=1.2.0" type="text/javascript"></script> -->
   <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   <script>
     window.TrackJS &&

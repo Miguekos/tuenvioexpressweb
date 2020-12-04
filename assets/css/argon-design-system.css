@@ -15877,7 +15877,9 @@ a.text-darker:focus {
 }
 
 .text-muted {
-  color: #8898aa !important;
+  /* color: #8898aa !important; */
+  color: #000000 !important;
+  
 }
 
 .text-black-50 {

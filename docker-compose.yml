@@ -9,8 +9,8 @@ services:
       - ./:/usr/share/nginx/html:ro
       - ./default.conf:/etc/nginx/conf.d/default.conf
     environment:
-      - VIRTUAL_HOST=tuenvioweb.apps.com.pe,www.tuenvioweb.apps.com.pe
-      - LETSENCRYPT_HOST=tuenvioweb.apps.com.pe,www.tuenvioweb.apps.com.pe
+      - VIRTUAL_HOST=texcargoweb.apps.com.pe,www.texcargoweb.apps.com.pe
+      - LETSENCRYPT_HOST=texcargoweb.apps.com.pe,www.texcargoweb.apps.com.pe
       - LETSENCRYPT_EMAIL=miguekos1233@gmail.com
 
   php:

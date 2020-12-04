@@ -71,15 +71,9 @@ Coded by www.creative-tim.com
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
-              <i class="ni ni-collection d-lg-none"></i>
+              <i class="ni ni-ui-04 d-lg-none"></i>
               <span class="nav-link-inner--text">APIs Docs</span>
             </a>
-            <div class="dropdown-menu">
-              <a href="../examples/landing.html" class="dropdown-item">Landing</a>
-              <a href="../examples/profile.html" class="dropdown-item">Profile</a>
-              <a href="../examples/login.html" class="dropdown-item">Login</a>
-              <a href="../examples/register.html" class="dropdown-item">Register</a>
-            </div>
           </li>
         </ul>
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
@@ -129,15 +123,59 @@ Coded by www.creative-tim.com
           <div class="card bg-secondary shadow border-0">
             <div class="card-header bg-white pb-5">
               <div class="text-muted text-center mb-3"><small></small></div>
-              <div class="btn-wrapper text-center">
+              <div class="btn-wrapper text-center" style="font-size: 26px;">
                 Tracking de <?php echo $_GET['id'] ?>
                 <input type="hidden" id="registro" value="<?php echo $_GET['id'] ?>">
+                <div id="resultado">
+
+                </div>
               </div>
             </div>
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
                 <small></small>
-                <span id="resultado"></span>
+                <span id=""> Estado del paquete</span>
+                <div class="row">
+                  <div class="col-4" style="text-align: left; width: 20%;">
+                    Comuna
+                  </div>
+                  <div class="col-8" style="text-align: right;">
+                    <span id="comuna"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3" style="text-align: left;">
+                    Recibe
+                  </div>
+                  <div class="col-9" style="text-align: right;">
+                    <span id="nya"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col" style="text-align: left;">
+                    Servicio
+                  </div>
+                  <div class="col" style="text-align: right;">
+                    <span id="tipodeservicio"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col" style="text-align: left;">
+                    Flete
+                  </div>
+                  <div class="col" style="text-align: right;">
+                    <span id="valordeflete"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col" style="text-align: left;">
+                    Control
+                  </div>
+                  <div class="col" style="text-align: right;">
+                    <span id="control"></span>
+                  </div>
+                </div>
+                <!-- <span id="resultado"></span> -->
               </div>
 
             </div>
@@ -173,10 +211,10 @@ Coded by www.creative-tim.com
       <div class="row align-items-center justify-content-md-between">
         <div class="col-md-6">
           <div class="copyright">
-            &copy; 2020 <a href="" target="_blank">Creative Tim</a>.
+            &copy; 2020 <a href="" target="_blank">Miguekos.</a>.
           </div>
         </div>
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
           <ul class="nav nav-footer justify-content-end">
             <li class="nav-item">
               <a href="" class="nav-link" target="_blank">Creative Tim</a>
@@ -191,7 +229,7 @@ Coded by www.creative-tim.com
               <a href="" class="nav-link" target="_blank">License</a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
@@ -228,9 +266,28 @@ Coded by www.creative-tim.com
       //     // always executed
       //   });
 
+
       $.get(`https://api.apps.com.pe/envios/registros/tracking/${idregistro}`, function(data, status) {
-        alert("Data: " + data + "\nStatus: " + status);
-        document.getElementById("resultado").innerHTML = JSON.stringify(data)
+        // alert("Data: " + data + "\nStatus: " + status);
+        // console.log(data);
+        // document.getElementById("resultado").innerHTML = JSON.stringify(data)
+        document.getElementById("comuna").innerHTML = (data.comuna)
+        document.getElementById("nya").innerHTML = `${data.name} ${data.lastname}`
+        document.getElementById("tipodeservicio").innerHTML = (data.tipodepago)
+        document.getElementById("valordeflete").innerHTML = `${data.valordeflete} $`
+        document.getElementById("control").innerHTML = (data.control)
+
+        if (data.estado == "0") {
+          document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-danger">En Bodega</span>'
+        } else if (data.estado == "1") {
+          document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-info">En Reparto</span>'
+        } else if (data.estado == "2") {
+          document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-success">Entregado</span>'
+        } else if (data.estado == "3") {
+          console.log("es 3");
+        }
+
+
       });
     });
   </script>
