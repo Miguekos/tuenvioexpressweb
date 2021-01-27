@@ -52,7 +52,7 @@ Coded by www.creative-tim.com
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
     <div class="container">
-      <a class="navbar-brand mr-lg-5" href="https://texcargoweb.apps.com.pe">
+      <a class="navbar-brand mr-lg-5" href="https://tracking.texcargo.cl">
         <img src="../assets/img/brand/black2.png">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@ Coded by www.creative-tim.com
         <div class="navbar-collapse-header">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="https://texcargoweb.apps.com.pe">
+              <a href="https://tracking.texcargo.cl">
                 <!-- <img src="../assets/img/wordwide.png"> -->
                 <img src="../assets/img/brand/black.png">
               </a>

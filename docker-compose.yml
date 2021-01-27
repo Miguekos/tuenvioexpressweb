@@ -9,8 +9,8 @@ services:
       - ./:/usr/share/nginx/html:ro
       - ./default.conf:/etc/nginx/conf.d/default.conf
     environment:
-      - VIRTUAL_HOST=texcargoweb.apps.com.pe,www.texcargoweb.apps.com.pe
-      - LETSENCRYPT_HOST=texcargoweb.apps.com.pe,www.texcargoweb.apps.com.pe
+      - VIRTUAL_HOST=tracking.texcargo.cl,www.tracking.texcargo.cl
+      - LETSENCRYPT_HOST=tracking.texcargo.cl,www.tracking.texcargo.cl
       - LETSENCRYPT_EMAIL=miguekos1233@gmail.com
 
   php:
