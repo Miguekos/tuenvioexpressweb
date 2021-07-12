@@ -196,6 +196,7 @@ Coded by www.creative-tim.com
 
             </div>
             <div class="text-center text-muted mb-4">
+              Comentario: 
               <div class="col" style="text-align: right;">
                     <span id="comentario"></span>
                   </div>
