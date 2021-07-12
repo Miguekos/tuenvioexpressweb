@@ -195,6 +195,11 @@ Coded by www.creative-tim.com
               </div>
 
             </div>
+            <div class="text-center text-muted mb-4">
+              <div class="col" style="text-align: right;">
+                    <span id="comentario"></span>
+                  </div>
+            </div>
           </div>
 
         </div>
@@ -299,6 +304,7 @@ Coded by www.creative-tim.com
         // console.log(formatted_date)
         current_datetime.setHours(current_datetime.getHours() - 5);
         document.getElementById("fecha").innerHTML = (current_datetime.toLocaleString())
+        document.getElementById("comentario").innerHTML = data.comentario
         if (data.estado == "0") {
           document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-danger">En Bodega</span>'
         } else if (data.estado == "1") {
@@ -307,6 +313,8 @@ Coded by www.creative-tim.com
           document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-success">Entregado</span>'
         } else if (data.estado == "3") {
           console.log("es 3");
+        } else if (data.estado == "4") {
+          document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-danger">Devuelto</span>'
         }
 
 
