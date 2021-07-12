@@ -305,7 +305,7 @@ Coded by www.creative-tim.com
         // console.log(formatted_date)
         current_datetime.setHours(current_datetime.getHours() - 5);
         document.getElementById("fecha").innerHTML = (current_datetime.toLocaleString())
-        document.getElementById("comentario").innerHTML = data.comentario
+        document.getElementById("comentario").innerHTML = data.comentario ? data.comentario : ""
         if (data.estado == "0") {
           document.getElementById("resultado").innerHTML = '<span class="badge badge-pill badge-danger">En Bodega</span>'
         } else if (data.estado == "1") {
