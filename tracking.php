@@ -289,7 +289,7 @@ Coded by www.creative-tim.com
       //   });
 
 
-      $.get(`https://api.apps.com.pe/envios/registros/tracking/${idregistro}`, function(data, status) {
+      $.get(`https://apipro.apps.com.pe/envios/registros/tracking/${idregistro}`, function(data, status) {
         // alert("Data: " + data + "\nStatus: " + status);
         // console.log(data);
         // document.getElementById("resultado").innerHTML = JSON.stringify(data)
